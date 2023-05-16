@@ -188,7 +188,7 @@
         padding: 0 24px;
         z-index: 53 !important;
         background-color: var(--color-black) !important;
-        height: calc(100% - var(--player-height) - var(--player-mobile-bonus-height) - 5px) !important;
+        height: calc(100% - var(--player-height) - var(--player-mobile-bonus-height)) !important;
         transition: none!important;
     }
 
