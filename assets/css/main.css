@@ -1,0 +1,662 @@
+/* Main Section */
+.main {
+    position: relative;
+    left: 240px;
+    padding: 0 var(--main-section-padding);
+    width: calc(100% - 240px);
+    margin-top: 70px;
+    margin-bottom: 150px;
+    background-color: var(--bg-color-default);
+}
+
+/* Sidebar CSS */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    background-color: #303030;
+    height: calc(100% - var(--player-height));
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar .logo {
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.sidebar .logo .logo__svg--img {
+    width: 120px;
+    height: 40px;
+}
+
+.sidebar__item {
+    padding: 10px 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar__item.active {
+    background-color: #434343;
+}
+
+.sidebar__item.disable {
+    opacity: 0.6;
+    background-color: transparent !important;
+    cursor: auto;
+}
+
+.sidebar__item:hover {
+    background-color: #434343;
+}
+
+.sidebar__item i {
+    margin-right: 8px;
+    font-size: 1.6rem;
+}
+
+.sidebar__heading {
+    padding: 0 25px;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-color-default);
+    opacity: 0.8;
+}
+
+.sidebar__upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto;
+    border-radius: 10px;
+    width: 90%;
+    height: 100px;
+    background-image: linear-gradient(to right, #434343 0%, #292929 100%);
+    opacity: 0.8;
+}
+
+.upgrade__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.upgrade__text {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.upgrade__button {
+    padding: 8px 12px;
+    border-radius: 35px;
+    width: 80%;
+    background-image: linear-gradient(129.1deg, rgba(243, 199, 83, 1) 26.8%, rgba(18, 235, 207, 1) 114.1%);
+    cursor: pointer;
+    color: var(--color-black);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.upgrade__button:hover {
+    opacity: 1;
+}
+
+/* Header CSS */
+
+.header {
+    position: fixed;
+    width: calc(100% - 240px);
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 var(--main-section-padding);
+    background-color: rgba(50, 50, 50, 0.4);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    z-index: 500;
+}
+
+.header__content--left,
+.header__content--right {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.header__content--left {
+    flex: 1;
+}
+
+/* Header Navigation CSS */
+
+.header__navigation {
+    display: flex;
+}
+
+.header__navigation .control__btn--icon i {
+    display: block;
+    font-size: 24px;
+    padding: 0;
+    color: var(--color-gray);
+}
+
+.header__navigation .control__btn--icon {
+    margin-right: 20px;
+}
+
+/* Header Search CSS */
+
+.header__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 440px;
+}
+
+.header__search.searching .search__suggest--list {
+    display: block;
+}
+
+.search__suggest--list {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: #303030;
+    border-radius: 0 0 20px 20px;
+    padding: 32px 12px 14px;
+    display: none;
+    max-height: 350px;
+    overflow-y: scroll;
+    z-index: -1;
+}
+
+.search__suggest--list::-webkit-scrollbar {
+    display: none;
+}
+
+.search__suggest--list.selecting {
+    display: block;
+}
+
+.search__suggest--list::before {
+    position: absolute;
+    content: "";
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: #333;
+    z-index: -1;
+}
+
+.search__suggest--list .song__wrap {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.suggest__list--item {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.header__search--input {
+    position: relative;
+    padding: 10px 12px 10px 22px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    background-color: rgba(100, 100, 100, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    font-size: 16px;
+    color: var(--text-color-default);
+    transition: all 0.3s ease;
+}
+
+.header__search--input::placeholder {
+    color: var(--text-color-default)
+}
+
+.header__search--input:focus {
+    background-color: #333;
+}
+
+.header__search>.control__btn--icon i {
+    display: block;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    transform: translateY(-50%);
+    right: 18px;
+}
+
+/* Header User CSS */
+
+.header__user {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__user .user__avatar {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding-top: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.5);
+    background-image: url(https://lateblm.github.io/KingMusic/assets/images/logo/avt.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid var(--color-white);
+    cursor: pointer;
+}
+
+.header__user .user__avatar::before {
+    content: '';
+    position: absolute;
+    left: 90%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    background-color: rgb(0, 200, 0);
+}
+
+.user__setting {
+    position: absolute;
+    right: 0;
+    top: 110%;
+    width: 225px;
+    background-color: #303030;
+    border-radius: 10px;
+    transform-origin: top right;
+    padding: 12px 6px;
+    display: none;
+    animation: showUserSetting 0.3s ease;
+}
+
+@keyframes showUserSetting {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.user__setting.active {
+    display: block;
+}
+
+.user__setting--crossfade {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    font-size: 1.3rem;
+}
+
+.crossfade__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.crossfade__setting--time {
+    height: 4px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: 18px !important;
+}
+
+.crossfade__setting--time.disabled {
+    opacity: 0.5;
+}
+
+.crossfade__setting--value {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.user__setting--list {
+    padding: 8px 12px;
+}
+
+hr {
+    opacity: 0.1;
+}
+
+.user__setting--item {
+    padding: 10px 0;
+    font-size: 1.4rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.user__setting--item:hover {
+    opacity: 0.8;
+}
+
+.user__setting--item i {
+    display: block;
+    font-size: 1.6rem;
+    margin-right: 8px;
+}
+
+
+/* Banner CSS */
+.banner {
+    position: relative;
+    margin: 24px 0;
+}
+
+.banner__slider {
+    position: relative;
+    overflow: scroll hidden;
+}
+
+.banner__slider::-webkit-scrollbar {
+    display: none;
+}
+
+.row.no-wrap {
+    flex-wrap: nowrap !important;
+}
+
+.banner__item--wrap {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+.banner__item--img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.banner:hover .banner__prev--btn,
+.banner:hover .banner__next--btn {
+    display: flex;
+}
+
+.banner__prev--btn,
+.banner__next--btn {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-30%);
+    background-color: rgba(100, 100, 100, 0.3);
+    width: 48px;
+    height: 48px;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.banner__next--btn i,
+.banner__prev--btn i {
+    display: block;
+    font-size: 2rem;
+    padding: 0;
+}
+
+.banner__prev--btn {
+    left: 24px;
+}
+
+.banner__next--btn {
+    right: 24px;
+}
+
+/* Artist CSS */
+
+.artist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.artist__heading {
+    margin: 24px 0 24px 12px;
+}
+
+.artist__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: scroll hidden;
+}
+
+.artist__wrap::-webkit-scrollbar {
+    display: none;
+}
+
+.artist__item--wrap {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+.artist__item--wrap:hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.artist__item--img {
+    width: 150px;
+    padding: 0 12px;
+    margin: 0 12px;
+}
+
+/* Song CSS */
+
+.songs .song__wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 24px;
+    margin: 6px 0;
+}
+
+.songs__played {
+    width: 100%;
+    display: none;
+}
+
+.song__played--list .song__wrap {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 24px;
+    margin: 6px 0;
+}
+
+.song__heading,
+.songs__played--heading {
+    margin: 48px 0 24px 12px;
+}
+
+/* Album CSS */
+
+.album__heading {
+    margin: 48px 0 24px 12px;
+}
+
+.album__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.album__desc {
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.album__desc--name {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.album__desc--artist {
+    font-size: 1.2rem;
+    color: var(--color-gray);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.album__thumb {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.album__thumb--img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.album__thumb:hover .album__thumb--img {
+    transform: scale(1.05);
+}
+
+.album__thumb--icon {
+    position: absolute;
+    display: flex;
+    transition: all 0.5s ease;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 0;
+}
+
+.album__thumb--icon i {
+    font-size: 4.2rem;
+    transition: all 0.3s ease;
+}
+
+.album__thumb:hover .album__thumb--icon {
+    opacity: 1;
+}
+
+/* Album Detail CSS */
+.album__container {
+    width: 100%;
+}
+
+.album__detail {
+    width: 100%;
+    display: flex;
+}
+
+.album__detail--heading {
+    margin: 48px 0 24px 12px;
+}
+
+.album__detail--wrap {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.album__detail .album__thumb {
+    border-radius: 5px;
+}
+
+.album__detail .album__desc--btn {
+    border: none;
+    outline: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 1.6rem;
+    margin-top: 16px;
+    cursor: pointer;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    transition: all 0.3s linear;
+}
+
+.album__detail .album__desc--btn i {
+    font-size: 2.4rem;
+    vertical-align: middle;
+}
+
+.album__detail .album__desc--btn:hover {
+    background-color: var(--text-color-default);
+
+}
+
+.album__detail .album__detail--list {
+    padding: 0;
+    margin-left: auto;
+    max-height: 300px;
+    overflow: hidden auto;
+}
+
+.album__detail--list::-webkit-scrollbar-track {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.album__detail--list .song__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.album__detail--list .album__info,
+.album__detail--list .song__info {
+    flex: 1;
+}
+
+.album__detail .album__info {
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

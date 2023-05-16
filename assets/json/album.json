@@ -1,0 +1,32 @@
+[
+    {
+        "name": "HuyR - Tuyển Tập Những Bài Hát Hay Nhất",
+        "artist": "HuyR",
+        "image": "assets/images/album/album2.jpg"
+    },
+    {
+        "name": "Masew - Tuyển Tập Những Bài Hát Hay Nhất",
+        "artist": "Masew",
+        "image": "assets/images/album/album1.jpg"
+    },
+    {
+        "name": "Nhạc Việt Mới Nhất",
+        "artist": "Various Artist",
+        "image": "assets/images/album/album3.jpg"
+    },
+    {
+        "name": "Nhạc Nước Ngoài Hay Nhất",
+        "artist": "Various Artist",
+        "image": "assets/images/album/album4.jpg"
+    },
+    {
+        "name": "Chill With Vicky Nhung",
+        "artist": "Vicky Nhung",
+        "image": "assets/images/album/album5.jpg"
+    },
+    {
+        "name": "Nhạc Hoa Thịnh Hành",
+        "artist": "Various Artist",
+        "image": "assets/images/album/album6.jpg"
+    }
+]
