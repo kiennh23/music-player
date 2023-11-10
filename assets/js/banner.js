@@ -5,7 +5,6 @@ const btnBannerPrev = $(".banner__prev--btn");
 const btnBannerNext = $(".banner__next--btn");
 
 const banner = {
-  testthoi: 213,
   currentIndex: 1,
   isScroll: false,
   bannerItemElmLength: bannerItemElm.length,

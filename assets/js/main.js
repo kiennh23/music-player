@@ -25,7 +25,6 @@ const sideBarItemElm = $$(".sidebar__item");
 const albumAPI = "assets/json/album.json";
 
 const app = {
-  testphatnua: "1213",
   albumList: [],
   albumWrapElm: [],
   btnAlbum: "",
