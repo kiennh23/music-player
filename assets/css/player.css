@@ -336,7 +336,7 @@
 }
 
 .player .visualizer .visualizer__cd--artist {
-  margin: 16llpx 0;
+  margin: 32px 0;
   text-align: center;
   line-height: 1.8rem;
   font-size: 1.8rem;
