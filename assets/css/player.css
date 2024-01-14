@@ -336,7 +336,7 @@
 }
 
 .player .visualizer .visualizer__cd--artist {
-  margin: 32px 0;
+  margin: 16llpx 0;
   text-align: center;
   line-height: 1.8rem;
   font-size: 1.8rem;
@@ -367,7 +367,7 @@
 .player .lyrics {
   position: relative;
   width: 700px;
-  height: 350px;
+  height: 300px;
   text-align: center;
   color: var(--text-color-default);
   font-size: 24px;
@@ -389,7 +389,7 @@
 }
 
 .player .lyrics.active.vertical {
-  height: 350px;
+  height: 300px;
 }
 
 .player .lyrics.active.horizontal {
