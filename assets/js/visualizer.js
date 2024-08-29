@@ -108,7 +108,7 @@ function visualizer() {
         ctx.stroke()
 
     }
-    draw()
+    // draw()
 }
 
 // Unlock The Audio Context On IOS:
