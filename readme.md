@@ -20,8 +20,7 @@ Experience it now: [Music Player](https://kiennh23.github.io/music-player/)
 - Lightweight and fast loading
 
 ## 📸 Screenshots
-![Music Player Screenshot](![image](https://github.com/user-attachments/assets/78dff35d-6251-47ff-a916-24adb55d3d7b)
-)
+![image](https://github.com/user-attachments/assets/0c67da0b-c4de-47f0-9bbf-b5bd26d1c05d)
 
 ## 📦 Installation & Usage
 Music Player is a web-based application, so no installation is required. Simply open your browser and visit the live demo link above to start listening to music instantly.
